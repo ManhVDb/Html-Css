@@ -18,6 +18,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 #nav {
     display: inline-block;
@@ -81,12 +82,31 @@ html {
     font-size: 15px;
     line-height: 46px;
 }
+
 #slider {
     margin-top: 46px;
-    height: 500px;
-    width: 100%;
-    background-color: rgb(62, 172, 245);
+    padding-top: 50%;
+    background:url(../img/slider1.jpg)top center /cover no-repeat;
+    position: relative;
 }
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: #ccc;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+#slider .text-heading{
+    font-weight: 500px;
+    font-size:24px
+}
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
 #conten {
 height: 1000px;
 background: silver;
