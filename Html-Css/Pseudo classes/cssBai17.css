@@ -1,0 +1,12 @@
+H1:hover {
+    color: brown;
+}
+H2:active {
+    color: crimson;
+}
+li:first-child {
+    color: darkblue;
+}
+li:before {
+    /* content:  */
+}

@@ -1,0 +1,20 @@
+.box1{
+    width: 550px;
+    height: 100px;
+    background-color: cyan;
+}
+.box2{
+    width: 50%;
+    height: 100px;
+    background-color: rgb(0, 255, 106);
+}
+h1{
+    /* 1rem : phụ thuộc vào thằng html quy đinh 1 rem bằng 40px 
+        em   : phụ thuộc vào thẻ gần nhất chứ nó
+        vw   : Bằng đúng chiều ngay của trình duyệt
+        vh   : Bằng chiều dọc của trình duyệt*/
+    font-size: 1rem; 
+}
+html{
+    font-size: 40px;
+}

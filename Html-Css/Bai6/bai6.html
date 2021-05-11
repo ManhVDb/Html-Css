@@ -1,0 +1,58 @@
+<!-- Làm bài tập tại đây -->
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Học Lập trình</title>
+        <link rel="stylesheet" href="bai6css.css">
+    </head>
+    <body>
+        <div id="main">
+            <div class="header">
+                <div class="nav">
+                    <div class="container">
+                        <h1 class="heading">Tôi đang đều đặn học lập trình mỗi ngày</h1>
+                        <div class="footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .paragraph.p2 {
+                color: rgb(41, 120, 194);
+            }
+        </style>
+        <h1>Heading 1</h1>
+        <p class="paragraph p1">Paragraph 1</p>
+        <p class="paragraph p2">Paragraph 1</p>
+        <p class="paragraph">Paragraph 2</p>
+
+
+        <style>
+            .parent .children {
+                color: red;
+            }
+        </style>
+        
+        <!-- Trường hợp .children là con trực tiếp của .parent -->
+        <div class="parent">
+            <div class="children">Children 1</div>
+            <div class="children">Children 2</div>
+            <div class="children">Children 3</div>
+        </div>
+        
+        <!-- Hoặc các .children nằm rải rác, miễn là con của .parent -->
+        <div class="parent">
+            <div class="children">Children 1</div>
+        
+            <div class="other-div">
+                <div class="children">Children 2</div>
+                
+                <div class="other-div">
+                    <div class="children">Children 3</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

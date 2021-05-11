@@ -1,0 +1,7 @@
+:root{
+    --text-color: chartreuse;
+}
+
+h1{
+    color: var(--text-color);
+}

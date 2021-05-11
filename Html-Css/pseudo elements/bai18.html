@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .box::before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: antiquewhite;
+    }
+    .box::after {
+        content: "::after";
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: antiquewhite;
+    }
+    h1::first-letter {
+        font-size: 50px;
+    }
+    h2::first-line {
+        color: blue;
+        /* css dòng đầu tiên */
+    }
+    h2::selection {
+        background-color: brown;
+        /* khi bôi đen */
+    }
+</style>
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <h1>Css ::first-letter</h1>
+    <h2>Css dòng thứ nhất
+        <br />::first-line
+    </h2>
+    <ul>
+        <li>thứ nhất</li>
+        <li>thứ hai</li>
+        <li>thứ ba</li>
+    </ul>
+</body>
+</html>
