@@ -5,6 +5,7 @@ body {
 
 body > div {
     margin: 300px;
+    flex-direction: row;
 }
 .toast {
     display: flex;
@@ -17,6 +18,26 @@ body > div {
     /* height: 80px; */
     min-width: 400px;
     max-width: 450px;
+    /* animation: sliderInLeft ease 0.3s, sliderOut linear 1s 3s forwards; */
+}
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 999999;
+}
+@keyframes sliderInLeft {
+    from {
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes sliderOut{
+    to {
+        opacity: 0;
+    }
 }
 .toast + .toast {
     margin-top: 24px;
@@ -59,15 +80,43 @@ body > div {
 .toast--waring .toast__icon {
     color: #2f86eb;
 }
-.toast--err {
+.toast--error {
     border-color: #ffc021;
 }
-.toast--err .toast__icon{
+.toast--error .toast__icon{
     color: #ffc021;
 }
 
-#toast {
-    position: fixed;
-    top: 32px;
-    right: 32px;
+/* Btn seccess */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    transform: opacity 0.2s ease;
+
 }
+.btn + .btn {
+    margin-top: 30px;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.btn--success {
+    background-color: #71be34;
+    text-align: center;
+    width: 150px;
+    height: 20px;
+}
+.btn--danger {
+    background-color: #ff623d;
+    text-align: center;
+    width: 150px;
+    height: 20px;
+}
+/* end btn seccess */

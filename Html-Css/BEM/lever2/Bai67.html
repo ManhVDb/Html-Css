@@ -11,24 +11,24 @@
     <div>
         <!-- successful -->
         <div id="toast">
-            <div class="toast toast--seccess">
+            <!-- <div class="toast toast--seccess">
                 <div class="toast__icon">
                     <i class="fas fa-check-circle"></i>
                 </div>
                 <div class="toast__body">
-                    <h3 class="toast__titele">successful</h3>
+                    <h3 class="toast__titele">Success</h3>
                     <p class="toast__msg">Now Brewing… Font Awesome 6 Alpha!</p>
                 </div>
                 <div class="toast__close">
                     <i class="fas fa-times"></i>
                 </div>
-            </div>
+            </div> -->
         </div>
         
         <!-- end successful-->
 
         <!-- start waring -->
-        <div class="toast toast--waring">
+        <!-- <div class="toast toast--waring">
             <div class="toast__icon">
                 <i class="fas fa-check-circle"></i>
             </div>
@@ -39,11 +39,11 @@
             <div class="toast__close">
                 <i class="fas fa-times"></i>
             </div>
-        </div>
+        </div> -->
         <!-- end waring -->
 
         <!-- start err -->
-                <div class="toast toast--err">
+                <!-- <div class="toast toast--err">
             <div class="toast__icon">
                 <i class="fas fa-check-circle"></i>
             </div>
@@ -54,8 +54,74 @@
             <div class="toast__close">
                 <i class="fas fa-times"></i>
             </div>
-        </div>
+        </div> -->
         <!-- end err -->
+        <!--start btn  -->
+
+        <!-- end btn -->
+        <div>
+            <div onclick="showSuccessToast();" class="btn btn--success btn--disabled">Go To Next Approval</div>
+            <div onclick="showErrorToast();" class="btn btn--danger">Try Again</div>
+        </div>
     </div>
+    <script>
+        function toast({title='',message='',type='',duration=3000}) {
+            const main = document.getElementById('toast');
+            if(main){
+                const toast= document.createElement('div');
+                const icons={
+                    success:'fas fa-check-circle',
+                    error:'fas fa-exclamation-circle'
+                }
+                const timeAuto =setTimeout(function () {
+                   main.removeChild(toast);
+                   
+                },duration+1000)
+
+                toast.onclick =function(e){
+                    if(e.target.closest('.toast__close')){
+                        main.removeChild(toast);
+                        clearTimeout(timeAuto);
+                    }
+                }
+
+                const delay =(duration/1000).toFixed(2);
+                const icon = icons[type];
+                toast.style.animation=`sliderInLeft ease 0.3s, sliderOut linear 1s ${delay}s forwards`;
+                toast.classList.add('toast',`toast--${type}`);
+                toast.innerHTML=`            
+                    <div class="toast__icon">
+                        <i class="${icon}"></i>
+                    </div>
+                    <div class="toast__body">
+                        <h3 class="toast__titele">${title}</h3>
+                        <p class="toast__msg">${message}</p>
+                    </div>
+                    <div class="toast__close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                `;
+                main.appendChild(toast)
+
+            }
+        }
+        function showSuccessToast(){
+            toast({
+            title: "Success",
+            message: "Đã Thành Công !!!!!!!!!!!!!!!!!!",
+            type: "seccess",
+            duration:1000
+        })
+        }
+        function showErrorToast(){
+            toast({
+            title: "Error",
+            message: "Đã Thất bại!!!!!!!!!!!!!!!!",
+            type: "error",
+            duration:3000
+        })
+        }
+
+    </script>
 </body>
 </html>
