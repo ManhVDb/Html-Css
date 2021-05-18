@@ -15,6 +15,7 @@
 .header__navbar-item{
     margin: 0 8px;
     position: relative;
+    min-height: 26px;
 }
 .header__navbar-item,
 .header__navbar-item-link {
@@ -51,8 +52,66 @@
     color: hsla(0,0%,100%,.7);
     cursor: pointer;
 }
+.header__navbar-css-icon:hover,   
 .header__navbar-item:hover{
     color: hsla(0,0%,100%,.7);
     cursor: pointer;
 }
+.header__navbar-icon {
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 10px 3px;
+}
+.header__navbar-css-icon {
+    font-size: 17px;
+}
+.navbar-icon:hover {
+    cursor: text;
+    color:var(--white-color);
+}
+
+/* Start QR */
+.header__qr {
+    width: 186px;
+    background-color : var(--white-color);
+    position : absolute;
+    left: 0;
+    top: 118%;
+    padding : 8px;
+    border-radius: 2px;
+    display: none;
+}
+
+.header__qr::before { 
+    position: absolute;
+    left: 0;
+    top: -16px;
+    width: 100%;
+    height: 20px;
+    content:"";
+    display: block;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-apps {
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar-icon-link:nth-child(1) {
+    margin-left: 11px;
+}
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 11px;
+}
+.header__qr-dowloald-icon {
+    height: 15px;
+}
+
+.header__navbar-item-qr:hover .header__qr {
+    display: block;
+}
+/* End QR */
 /* End Header */

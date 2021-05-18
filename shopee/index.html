@@ -17,20 +17,43 @@
         <header class="header">
             <nav class="header__navbar">
                 <ul class="header__navbar-list">
-                    <li class="header__navbar-item header__navbar-item--separate">Vào cửa hàng trên ứng dụng bakv</li>
-                    <li class="header__navbar-item">Kết nối
+                    <li class="header__navbar-item header__navbar-item-qr header__navbar-item--separate">
+                        Vào cửa hàng trên ứng dụng bakv
+                        <div class="header__qr">
+                            <img src="./assets/img/MaQR.png" alt="Ma QR" class="header__qr-img">
+                            <div class="header__qr-apps">
+                                <a href="#" class="header__navbar-icon-link">
+                                    <img src="./assets/img/iconApple.png" alt="Google Play" class="header__qr-dowloald-icon">
+                                </a>
+                                <a href="#" class="header__navbar-icon-link">
+                                    <img src="./assets/img/iconCHPlay.png" alt="App store" class="header__qr-dowloald-icon">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item">
+                        <span class="navbar-icon">Kết nối</span>
                         <a href="#" class="header__navbar-icon">
-                            <i class="fab fa-facebook"></i>
-                            <i class="fab fa-instagram-square"></i>
+                            <i class="header__navbar-css-icon fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="header__navbar-icon">
+                            <i class="header__navbar-css-icon fab fa-instagram-square"></i>
                         </a>
                     </li>
+                    
                 </ul>
                 <ul class="header__navbar-list">
                     <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link">Thông báo</a>
+                        <a href="#" class="header__navbar-item-link">
+                            <i class="header__navbar-css-icon fas fa-bell"></i>
+                            Thông báo
+                        </a>
                     </li>
                     <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link">Trợ giúp</a>
+                        <a href="#" class="header__navbar-item-link">
+                            <i class="header__navbar-css-icon far fa-question-circle"></i>
+                            Trợ giúp
+                        </a>
                     </li>
                     <li class="header__navbar-item header__navbar-item--strong strong--separate">Đăng ký</li>
                     <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
