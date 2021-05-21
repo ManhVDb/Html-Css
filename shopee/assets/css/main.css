@@ -114,4 +114,38 @@
     display: block;
 }
 /* End QR */
+
+/* Start Notify */
+.header__notify {
+    position: absolute;
+    top: 100%;
+    width: 404px;
+    right: 0;
+    background-color: var(--white-color);
+}
+.header__notify-header {
+
+}
+.header__notify-list {
+
+}
+.header__notify-item {
+
+}
+.header__notify-link {
+
+}
+.header__notify-img {
+
+}
+.header__notify-infor {
+
+}
+.header__notify-name {
+
+}
+.header__notify-descriotion {
+
+}
+/* End Notify */
 /* End Header */
