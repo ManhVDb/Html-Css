@@ -57,6 +57,9 @@
     color: hsla(0,0%,100%,.7);
     cursor: pointer;
 }
+.header__navbar-item-show:hover .header__notify {
+    display: block;
+}
 .header__navbar-icon {
     color: var(--white-color);
     text-decoration: none;
@@ -118,34 +121,108 @@
 /* Start Notify */
 .header__notify {
     position: absolute;
-    top: 100%;
+    top: 118%;
     width: 404px;
     right: 0;
     background-color: var(--white-color);
+    border: 1px solid #D3D3D3;
+    cursor: default;
+    animation: headerNotify ease-in 0.2s;
+    transform-origin: 90% top;
+    display: none;
+    will-change: opacity,transform;
+}
+
+.header__notify::before {
+    content: "";
+    border: 20px solid;
+    border-color: transparent transparent var(--white-color)  transparent ;
+    position: absolute;
+    right: 12px;
+    top: -30px;
+}
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 130px;
+    right: 0;
+    top: -16px;
+    height: 20px;
+}
+
+@keyframes headerNotify {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 .header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+    line-height: 40px;
+}
+.header__notify-header h3 {
+    color: #999;
+    font-size: 13px;
+    margin-top: 0;
+    margin-left: 12px;
 
 }
 .header__notify-list {
-
+    padding-left: 0;
 }
 .header__notify-item {
-
+    display: flex;
+}
+.header__notify-link:hover {
+    background-color: #f7f7f7;
 }
 .header__notify-link {
-
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    width: 100%;
+    background-color: rgba(238,75,43,0.08);
 }
 .header__notify-img {
-
+    width: 48px;
+    object-fit: contain;
 }
 .header__notify-infor {
-
+    margin-left: 12px;
 }
 .header__notify-name {
+    display: block;
+    font-size: 14px;
+    color: var(--black-color);
+    font-weight: 400;
+    line-height: 18px;
 
 }
 .header__notify-descriotion {
+    display: block;
+    font-size: 12px;
+    color: #765F6E;
+    line-height: 25px;
+    margin-top: 4px;
+}
+.header__notify-footer{
+    display: flex;
 
+}
+.header__notify-footer-link {
+    text-decoration: none;
+    color: var(--black-color);
+    line-height: 25px;
+    font-size: 14px;
+    margin: auto;
+    padding: 8px 16px;
+    /* thẻ cha là display : flex thẻ con muốn căn giữa sửa dụng margin : aotu sẽ tự động căng giữa */
 }
 /* End Notify */
 /* End Header */
