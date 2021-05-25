@@ -49,16 +49,16 @@ html {
     background-color: rgba(0,0,0,0.4);
 }
 .modal__body {
-
-    background-color: var(--white-color);
+    /* background-color: var(--white-color); */
     margin: auto;
     position: relative;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     z-index: 3;
 }
 .btn.btn-size-s {
     height: 32px;
     font-size: 12px;
+    padding: 6px 8px;
 }
 /* button Style */
 .btn {
@@ -68,7 +68,7 @@ html {
     border: none;
     border-radius: 2px;
     font-size: 14px;
-    padding: 0;
+    padding: 0 8px ;
     outline: none;
     cursor: pointer;
     color: var(--text-color);
